@@ -1,2 +1,2 @@
 # Beecrowd
-Resulução dos exercícios do Beecrowd em JS
+Resolução dos exercícios do Beecrowd em [JS]
