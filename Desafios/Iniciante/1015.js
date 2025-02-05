@@ -9,5 +9,5 @@ let y1 = parseFloat(xy1[1]);
 let x2 = parseFloat(xy2[0]);
 let y2 = parseFloat(xy2[1]);
 
-const distance = Math.hypot(x2 - x1,y2-y1);
+const distance = Math.hypot(x2 - x1, y2-y1);
 console.log(`${distance.toFixed(4)}`);
