@@ -27,13 +27,13 @@ if (valueA < 0 &&
     valueA < 0 &&
     valueA < valueC &&
     valueA < valueB &&
-    valueC < valueB){
+    valueC < valueB) {
     console.log(`${valueA}\n${valueC}\n${valueB}`);
 }else if(
     valueC < 0 &&
     valueC < valueA &&
     valueC < valueB &&
-    valueA < valueB){
+    valueA < valueB) {
     console.log(`${valueC}\n${valueA}\n${valueB}`);    
 }else{
     console.log(`${valueB}\n${valueA}\n${valueC}`);
