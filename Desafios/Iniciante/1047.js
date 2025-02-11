@@ -8,29 +8,50 @@ let endHour = value[2];
 let endMin = value[3];
 let day = 24;
 let totalMin = 60;
+let hours, minutes;
 
+//Equal hours
 if(startHour === endHour && startMin === endMin) {
     console.log(`O JOGO DUROU 24 HORA(S) E 0 MINUTO(S)`);
-}else if(startHour === endHour && startMin > endMin){
-    let min = (totalMin - startMin) + endMin;
-    console.log(`O JOGO DUROU 24 HORA(S) E ${min} MINUTO(S)`);
-}else{
-    let min = startMin - endMin;
-    console.log(`O JOGO DUROU 24 HORA(S) E ${min} MINUTO(S)`);
-}if(startHour > endHour && startMin > endMin) {
-    let hour = (day - startHour) + endHour;
-    let min = (totalMin - startMin) + endMin;
-    console.log(`O JOGO DUROU ${hour} HORA(S) E ${min} MINUTO(S)`);
-}else if(endHour > startHour && endMin > startMin) {
-    let hour = startHour - endHour;
-    let min = endMin - startMin;
-    console.log(`O JOGO DUROU ${hour} HORA(S) E ${min} MINUTO(S)`);
-}else if(startHour > endHour && endMin > startMin) {
-    let hour = (day - startHour) + endHour;
-    let min = endMin - startMin;
-    console.log(`O JOGO DUROU ${hour} HORA(S) E ${min} MINUTO(S)`);
-}else{
-    let hour = startHour - endHour;
-    let min = (totalMin - startMin) + endMin;
-    console.log(`O JOGO DUROU ${hour} HORA(S) E ${min} MINUTO(S)`);
 }
+//Equal hours but diferent minutes
+else if(startHour === endHour){
+    if (startMin < endMin){
+        minutes = (endMin - startMin);
+        console.log(`O JOGO DUROU 0 HORA(S) E ${minutes} MINUTO(S)`);
+    }else{
+        minutes = (totalMin - startMin) + endMin;
+        console.log(`O JOGO DUROU 23 HORA(S) E ${minutes} MINUTO(S)`)
+    }
+}
+
+//Starting hour higher than ending hour.
+else if (startHour > endHour){
+    hours = (day - startHour) + endHour;
+
+    if (startMin > endMin){
+        hours -= 1;
+        minutes = (totalMin - startMin) + endMin;
+    } else {
+        minutes = endMin - startMin;
+    }
+    console.log(`O JOGO DUROU ${hours} HORA(S) E ${minutes} MINUTO(S)`);
+    
+}
+
+//Starting hour lower than ending hour.
+else {
+    
+    hours = endHour - startHour;
+
+    if (startMin > endMin){
+        hours -= 1;
+         minutes = (totalMin - startMin) + endMin;
+        
+    } else {
+         minutes = endMin - startMin;
+        
+    }
+    console.log(`O JOGO DUROU ${hours} HORA(S) E ${minutes} MINUTO(S)`);
+}
+
