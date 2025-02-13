@@ -14,7 +14,7 @@ let hours, minutes;
 if(startHour === endHour && startMin === endMin) {
     console.log(`O JOGO DUROU 24 HORA(S) E 0 MINUTO(S)`);
 }
-//Equal hours but diferent minutes
+//Equal hours but diferent minutes"
 else if(startHour === endHour){
     if (startMin < endMin){
         minutes = (endMin - startMin);
