@@ -1,6 +1,8 @@
 let lines = `4`.split('\n');
 
 let monthS = parseInt(lines[0]);
+// let arrayMeses = ['', 'January']
+
 
 switch (monthS) {
     case 1:
