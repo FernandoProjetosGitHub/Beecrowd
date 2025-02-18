@@ -5,21 +5,27 @@ let lines = `7
 4.6
 12`.split('\n');
 
-// Variável para contar quantos números positivos foram encontrados
-let numPositive = 0;
 
-// Loop que percorre todos os elementos do array "lines"
-for (let index = 0; index < lines.length; index++) {
-
-    // Converte o valor da posição "index" de string para número decimal (float)
-    let value = parseFloat(lines[index]);
-
-    // Verifica se o valor é positivo
-    if (value > 0) {
-        numPositive++; // Se for positivo, incrementa o contador
+// Declara a variável numPositive e usa o método reduce para contar os números positivos no array "lines"
+let numPositive = lines.reduce((acumulador, itemAtual) => {
+    
+    // Converte o itemAtual para um número inteiro e verifica se ele é maior que zero
+    if (parseFloat(itemAtual) > 0) {
+        
+        // Se for positivo, incrementa o acumulador em 1
+        acumulador += 1;
     }
-}
 
+    // Retorna o acumulador atualizado para a próxima iteração
+    return acumulador;
+
+// Define o valor inicial do acumulador como 0
+}, 0);
+
+
+
+// Exemplo de saída: Se lines = ["1", "-2", "3", "0", "5", "-6"], numPositive será 3
 // Exibe a quantidade de valores positivos encontrados
 console.log(`${numPositive} valores positivos`);
+
 
