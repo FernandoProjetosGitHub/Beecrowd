@@ -25,12 +25,12 @@ console.log(`${negative} valor(es) negativo(s)`);
 
 
 
-// let valueEven = lines.map(Number).filter(num => num % 2 === 0);
-// let valueOdd = lines.map(Number).filter(num => num % 2 !== 0);
-// let valuePositive = lines.map(Number).filter(num => num > 0);
-// let valueNegative = lines.map(Number).filter(num => num < 0);
+let valueEven = lines.map(Number).filter(num => num % 2 === 0);
+let valueOdd = lines.map(Number).filter(num => num % 2 !== 0);
+let valuePositive = lines.map(Number).filter(num => num > 0);
+let valueNegative = lines.map(Number).filter(num => num < 0);
 
-// console.log(`${valueEven.length} valor(es) par(es)`);
-// console.log(`${valueOdd.length} valor(es) impar(es)`);
-// console.log(`${valuePositive.length} valor(es) positivo(s)`);
-// console.log(`${valueNegative.length} valor(es) negativo(s)`);
+console.log(`${valueEven.length} valor(es) par(es)`);
+console.log(`${valueOdd.length} valor(es) impar(es)`);
+console.log(`${valuePositive.length} valor(es) positivo(s)`);
+console.log(`${valueNegative.length} valor(es) negativo(s)`);
