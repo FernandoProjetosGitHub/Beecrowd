@@ -22,8 +22,15 @@ let percentualCoelhos = 0;
 let percentualRatos = 0;
 let percentualSapos = 0;
 
+// let counter = 1
+// while(counter <= quantity){
+//     ...
 
-for(let counter = 1; counter <= quantity; counter ++) {
+//     counter++;
+
+// }
+
+for(let counter = 1; counter <= quantity; counter ++) { 
 
     let cobaias = lines[counter];
 
