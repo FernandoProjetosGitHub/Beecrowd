@@ -1,14 +1,17 @@
-let i = 0
-let j = 1
+let i = 0;
+let j = 1;
+let adicional = 0;
 
-for(let x = 0; x < 33; x++){
-    if( i >= 0 && i< 2){
-        i += (0.2).toFixed(1)
-        i -= parseFloat(0.8).toFixed(1)
-        j+= (0.2).toFixed(1)
+for(let contador = 0; contador < 33; contador++){
+
+    if( contador > 0 && contador % 3 === 0 ){
+        
+        i = parseFloat((parseFloat(i) + 0.2).toFixed(1));
+        // j = parseFloat(parseFloat(j) + 0.2).toFixed(1)
+        adicional += 0.2;
+        j = parseFloat((parseFloat(1) + adicional).toFixed(1));
     }
-    console.log(`I=${i} J=${j}`);
-    i += 1
+   console.log(`I=${i} J=${j}`);
     
-    
+   j += parseFloat(1);
 }
