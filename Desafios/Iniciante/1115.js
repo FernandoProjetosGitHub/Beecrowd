@@ -13,7 +13,8 @@ for(let splitter = 0; splitter < lines.length; splitter ++){
 
     if(lines0 === 0 || lines1 === 0){
         break;
-    }else if(lines0 > 0 && lines1 > 0){
+    } 
+    if(lines0 > 0 && lines1 > 0){
         console.log("primeiro");
         
     }else if(lines0 < 0 && lines1 > 0){

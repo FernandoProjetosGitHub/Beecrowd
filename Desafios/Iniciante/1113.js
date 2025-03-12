@@ -6,6 +6,7 @@ let lines = `5 4
 for(let splitter = 0; splitter < lines.length; splitter ++){
 
     let linesSplitted = lines[splitter].split(" ");
+
     let lines0 = parseInt(linesSplitted[0]);
     let lines1 = parseInt(linesSplitted[1]);
 
@@ -13,7 +14,8 @@ for(let splitter = 0; splitter < lines.length; splitter ++){
 
         break;
 
-    }else if(lines0 > lines1){
+    }
+    if(lines0 > lines1){
 
         console.log(`Decrescente`);
         
