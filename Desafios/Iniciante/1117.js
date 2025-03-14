@@ -3,23 +3,23 @@ let lines = `-3.5
 11.0
 10.0`.split('\n').map(Number);
 
-let validNotes = 0; // Contador para notas válidas
-let sum = 0; // Soma das notas válidas
+let validNotes = 0;
+let sum = 0;
 
-for(let counter = 0; counter < lines.length; counter ++ ){ // Loop através de todas as linhas
-
-    const linesArray = lines[counter]; // Pega a nota atual
+for (let counter = 0; counter < lines.length; counter++) {
+    const note = lines[counter]; 
     
-    if(linesArray < 0 || linesArray > 10){ // Verifica se a nota é inválida
-        console.log(`nota invalida`); // Imprime mensagem de nota inválida
+    if (note < 0 || note > 10) {
+        console.log("nota invalida");
+    } else {
+        validNotes++;
+        sum += note;
         
-    }else {
-        validNotes ++; // Incrementa o contador de notas válidas
-        sum += linesArray; // Adiciona a nota válida à soma
-        if(validNotes === 2){ // Verifica se já foram lidas duas notas válidas
-            const media = (sum / 2).toFixed(2); // Calcula a média das duas notas válidas
-            console.log (`media = ${media}`); // Imprime a média
+        if (validNotes === 2) {
+            const media = parseFloat((sum / 2).toFixed(2));
+            console.log(`media = ${media}`);
+            break; 
         }
     }
-        
 }
+
