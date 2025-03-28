@@ -3,18 +3,21 @@ let lines = `5
 3
 0`.split('\n');
 
-
-
-for(let contador = 0; contador < lines; contador++){
-    
-    const x = parseInt(lines[contador]);
-    
-    if(x === 0){
+// loop for para percorrer os valores de 
+for (let contador = 0; contador < lines.length; contador++) {
+    // declara uma nova variavel carregando os indices do loop, com a finalidade em percorrer todos os itens do array
+    let x = parseInt(lines[contador]);
+    //condição de parada
+    if (x === 0) {
         break;
     }
-
-    console.log(contador)
-    // console.log(`${contador <= lines[0] ? contador +1 : contador +0}`);
-
-    
+    //cria um array vazio
+    let resultado = [];
+    //loop com o intuito de adicionar os valores entre 1 e o número correspondente ao indice atual
+    for(let adicionar = 1; adicionar <= x; adicionar ++){
+        //adiciona o valor do indice percorrido ao array criado recentemente
+        resultado.push(adicionar);
+    }
+    //imprime o valor do array em formato de string separados por espaço em branco
+    console.log(resultado.join(' '));
 }
