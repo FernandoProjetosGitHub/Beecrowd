@@ -2,34 +2,31 @@ let lines = `3 -1 0 -2 2`.split('\n');
 
 
 
-let splitter = lines[0].split(" ");
-let a = splitter[0]
+let splitter = lines[0].split(" ").map(elem => parseInt(elem));
 
-// for (let i = 1; i < splitter.length; i++) {
-//     const n = parseInt(splitter[i]);
-//     if(n <= 0){
-//         i + 1
-//         console.log(n);
-//     }else if(0){
+let valueA = splitter[0];
+let valueN = 0;
 
-//     }
+for (let contador = 1; contador < splitter; contador++) {
+
+    let temp = splitter[contador];
     
-// }
+    if(temp > 0){
 
-function somandoInteiros(a, n) {
-
-    for (let i = 1; i < splitter.length; i++) {
-
-    let n = parseInt(splitter[i]);
-
-    if(n <= 0){
-        i + 1
-        console.log(n);
+        valueN = temp;
+        break;
     }
-    
 }
+let total = 0;
+
+for(let i = 0; i <= valueN -1; i++){
+
+    let formula = valueA + i;
+
+    total += formula;
+
 }
-somandoInteiros(a,n )
+console.log(total);
 
 
 
