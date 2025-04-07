@@ -5,10 +5,9 @@ let n = parseInt(lines[0]);
 for(let divisor = 1; divisor <= n; divisor++){
     
     if(n % divisor === 0) {
-        console.log(divisor)
+        
+        console.log(divisor);
+
     }
 
-    // console.log(`${n % divisor === 0 ? divisor : }`);
-
-    // n % divisor === 0 && console.log(`${divisor}`);
 }

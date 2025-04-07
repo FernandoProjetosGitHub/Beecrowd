@@ -11,10 +11,12 @@ function ehPrimo(numeroTeste) {
 
     if (numeroTeste < 2)
         return false;
-    // numeroTeste = numeroTeste < 2 ? return false : return true;
+    // numeroTeste = numeroTeste < 2 ? false : true;
+
     let divisores = 0;
 
     for (let percorre = 1; percorre <= numeroTeste; percorre++){
+
         if (numeroTeste % percorre === 0){
             divisores ++
         }
