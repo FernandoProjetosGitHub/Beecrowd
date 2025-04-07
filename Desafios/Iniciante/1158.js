@@ -6,24 +6,20 @@ let N = parseInt(lines[0]);
 
 
 
-for(let splitter = 1; splitter <= N; splitter++){
-    
+for (let splitter = 1; splitter <= N; splitter++) {
+
     let [x, y] = lines[splitter].split(" ").map(Number);
-    
-    y = y % 2 === 0 ? y + 1 : y + 0;
-    
-    
-    for(let i = 1; i <= x; i++){
-        
-        
-        let somaDeImpares = 0;
-        if(y % 2 !== 0){
-            let impares = y + i*2;
-            somaDeImpares += impares
-            
-            console.log(impares);
-        }
-        
+
+    x = x % 2 === 0 ? x + 1 : x + 0;
+
+    let somaDeImpares = 0;
+
+    for (let i = 0; i < y; i++) {
+
+        let impares = x + (i * 2);
+        somaDeImpares += impares;
+
     }
-    
+    console.log(somaDeImpares);
+
 }
