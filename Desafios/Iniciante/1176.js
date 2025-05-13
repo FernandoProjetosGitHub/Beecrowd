@@ -22,5 +22,5 @@ for (let indice = 1; indice <= numeroDeCasos; indice++) {
 
     const fibonacci = parseInt(lines[indice]);
     console.log(`Fib(${fibonacci}) = ${calculandoFib(fibonacci)}`);
-
+    
 }
