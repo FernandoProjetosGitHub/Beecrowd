@@ -9,9 +9,9 @@ for(let i = 0; i < lines.length; i++) {
 
     let reclamacoes = parseInt(lines[i]);
     if(reclamacoes === 0) {
-        console.log("vai ter copa!")
+        console.log("vai ter copa!");
     }else if(reclamacoes > 0 && reclamacoes <= 100){
-        console.log("vai ter duas!")
+        console.log("vai ter duas!");
     }
     
 }
