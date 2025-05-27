@@ -44,7 +44,7 @@
 //         console.log(`Caso #${contador}: De novo!`);
 //         contador++;
 //     }
-    
+
 // }
 
 lines = `3
@@ -56,45 +56,46 @@ let resultado = "";
 
 
 let regras = [
-    {nome: "tesoura", ganhade:["papel", "lagarto"]},
-    {nome: "papel", ganhade:["pedra", "Spock"]},
-    {nome: "pedra", ganhade: ["tesoura", "lagarto"]},
-    {nome: "lagarto", ganhade: ["Spock", "papel"]},
-    {nome: "Spock", ganhade: ["pedra", "tesoura"]} 
+    { nome: "tesoura", ganhade: ["papel", "lagarto"] },
+    { nome: "papel", ganhade: ["pedra", "Spock"] },
+    { nome: "pedra", ganhade: ["tesoura", "lagarto"] },
+    { nome: "lagarto", ganhade: ["Spock", "papel"] },
+    { nome: "Spock", ganhade: ["pedra", "tesoura"] }
 ];
 
 let quantidadeDePartidas = parseInt(lines[0]);
 let contador = 1;
 
-for(let i = 0; i < quantidadeDePartidas; i++){
+for (let i = 0; i < quantidadeDePartidas; i++) {
     let linhaComoArray = lines[i + 1].split(" ");
     let sheldon = linhaComoArray[0];
     let raj = linhaComoArray[1];
     // Regra do empate
-    if(sheldon === raj){
-    resultado = "De novo!";
-    console.log(`Caso #${contador}: ${resultado}`);
-    contador++;
-    
-}
-// Regra quando alguém ganha
-else if(sheldon !== raj){
-    let regraAtual = regras.find((regra) => {
-        if(regra.nome === sheldon){
-            return true;
-        }
-    })
+    if (sheldon === raj) {
+        resultado = "De novo!";
+        console.log(`Caso #${contador}: ${resultado}`);
+        contador++;
 
-    if(regraAtual.ganhade.includes(raj)){
-        resultado = "Bazinga!";
-        console.log(`Caso #${contador}: ${resultado}`);
-        contador++;
-    }else{
-        resultado = "Raj trapaceou!";
-        console.log(`Caso #${contador}: ${resultado}`);
-        contador++;
     }
-    
-}}
+    // Regra quando alguém ganha
+    else if (sheldon !== raj) {
+        let regraAtual = regras.find((regra) => {
+            if (regra.nome === sheldon) {
+                return true;
+            }
+        })
+
+        if (regraAtual.ganhade.includes(raj)) {
+            resultado = "Bazinga!";
+            console.log(`Caso #${contador}: ${resultado}`);
+            contador++;
+        } else {
+            resultado = "Raj trapaceou!";
+            console.log(`Caso #${contador}: ${resultado}`);
+            contador++;
+        }
+
+    }
+}
 
 
