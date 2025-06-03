@@ -7,11 +7,11 @@ let lines = `5
 
 let qtdProdutosComprados = parseInt(lines[0]);
 let arrayDeProdutos = [
-    [1001, 1.50],
-    [1002, 2.50],
-    [1003, 3.50],
-    [1004, 4.50],
-    [1005, 5.50],
+    {codigo: 1001, valor: 1.50},
+    {codigo: 1002, valor: 2.50},
+    {codigo: 1003, valor: 3.50},
+    {codigo: 1004, valor: 4.50},
+    {codigo: 1005, valor: 5.50},
 ]
 
 let resultado = 0;
@@ -22,10 +22,10 @@ for (let i = 1; i <= qtdProdutosComprados; i++) {
     let produtoSelecionado = parseInt(separandoLinesAposQtdDeProdutos[0]);
     let quantidadeComprada = parseFloat(separandoLinesAposQtdDeProdutos[1]);
 
-    let produto = arrayDeProdutos.find(item => item[0] === produtoSelecionado);
+    let produto = arrayDeProdutos.find(item => item.codigo === produtoSelecionado);
 
     if (produto) {
-        resultado += produto[1] * quantidadeComprada;
+        resultado += produto.valor * quantidadeComprada;
     }
 }
 
