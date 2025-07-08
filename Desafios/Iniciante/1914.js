@@ -8,24 +8,14 @@ Dayran PAR Conrado IMPAR
 Popis PAR Chaves IMPAR
 2 7`.split(`\n`);
 
-let qtdDeCasos = parseInt(lines[0]);
-
-let jogadas = [
-    {jogador1:["Quico", "PAR"], jogador2: ["Chiquinha", "IMPAR"]},
-    {jogador1: ["Dami", "PAR"], jogador2: ["Marcus", "IMPAR"]},
-    {jogador1: ["Dayran", "PAR"], jogador2: ["Conrado", "IMPAR"]},
-    {jogador1: ["Popis", "PAR"], jogador2: ["Chaves", "IMPAR"]},
-];
-
-
-
-
-for (let i = 1; i <= qtdDeCasos; i++) {
-    let jogada = jogadas[i].split(" ");
-    let jogador1 = jogada[0];
-    let jogador2 = jogada[2];
-    let jogada1 = jogada[1];
-    let jogada2 = jogada[3];
-
-    let confrontos = jogadas.find(item => item.jogador1[1] === )
+function teste() {
+    //1 , 3, 5
+    for (let i = 1; i < lines.length; i +=) {
+        let jogador = lines[i];
+        let jogada = lines[i + 1];
+        console.log(jogador, jogada);
+    }
 }
+teste();
+
+

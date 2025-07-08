@@ -36,15 +36,15 @@ let jogador2 = "";
 //Função que carrega as regras para a resolução.
 function determinarVencedor(jogador1, jogador2) {
     
-    // if(jogador1 === "ataque" && jogador2 === "pedra" || 
-    //    jogador1 === "ataque" && jogador2 === "papel" ||
-    //    jogador1 === "pedra" && jogador2 === "papel") 
-    //     return "Jogador 1 venceu";
+    if(jogador1 === "ataque" && jogador2 === "pedra" || 
+       jogador1 === "ataque" && jogador2 === "papel" ||
+       jogador1 === "pedra" && jogador2 === "papel") 
+        return "Jogador 1 venceu";
 
-    // if(jogador1 === "pedra" && jogador2 === "ataque" || 
-    //    jogador1 === "papel" && jogador2 === "ataque" ||
-    //    jogador1 === "papel" && jogador2 === "pedra") 
-    //     return "Jogador 2 venceu";
+    if(jogador1 === "pedra" && jogador2 === "ataque" || 
+       jogador1 === "papel" && jogador2 === "ataque" ||
+       jogador1 === "papel" && jogador2 === "pedra") 
+        return "Jogador 2 venceu";
 
     let casoGeral = {
         ataquepedra: "Jogador 1 venceu",
